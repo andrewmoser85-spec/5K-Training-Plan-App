@@ -1,0 +1,1245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>12-Week Training Tracker</title>
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#111827;color:#fff;padding:16px}
+header h1{font-size:1.2rem;margin:0} header p{margin:4px 0 0;color:#d1d5db;font-size:.88rem}
+main{max-width:760px;margin:auto;padding:14px 12px 90px}
+.notice,.race-calendar{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;margin-bottom:12px}
+.notice{background:#eff6ff;color:#1e3a8a}
+.nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:12px 0}
+.nav a{text-align:center;padding:9px 4px;background:#fff;border:1px solid var(--line);border-radius:9px;color:#1d4ed8;text-decoration:none;font-weight:700}
+.week{background:#fff;border:1px solid var(--line);border-radius:15px;margin:10px 0;overflow:hidden}
+.week>summary{padding:15px;cursor:pointer;display:flex;justify-content:space-between;gap:10px;font-weight:800}
+.week>summary small{font-weight:500;color:var(--muted);text-align:right}
+.week-body{padding:0 12px 14px}
+.callout,.rule,.race{padding:11px;border-radius:10px;margin:8px 0;font-size:.9rem}
+.callout{background:#f0fdf4;color:#166534} .rule{background:#fff7ed;color:#9a3412} .race{background:#fef2f2;color:#991b1b}
+.day-card{border:1px solid var(--line);border-radius:12px;padding:12px;margin:9px 0}
+.day-card h3{margin:0 0 6px;font-size:1rem}
+.check{display:flex;gap:10px;padding:8px 0;border-top:1px solid #f1f2f4;align-items:flex-start}
+.check input{width:22px;height:22px;flex:0 0 auto;accent-color:var(--accent)}
+.check small{display:block;color:var(--muted);margin-top:2px}
+.exercise{margin-top:5px} .exercise summary{color:#1d4ed8;font-weight:700;cursor:pointer}
+.exercise ul{padding-left:20px;margin:8px 0} .exercise li{margin:6px 0}
+.exercise a{color:#1d4ed8}
+.metrics{border-top:1px solid var(--line);margin-top:12px;padding-top:12px}
+.metrics label{display:block;font-size:.82rem;color:var(--muted);margin:8px 0}
+.metrics input,.metrics select,.metrics textarea{display:block;width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:#fff;font:inherit;margin-top:4px;color:var(--ink)}
+.metrics textarea{min-height:60px} .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+footer{text-align:center;color:var(--muted);font-size:.8rem;padding:14px}
+@media(max-width:480px){.grid{grid-template-columns:1fr} .nav{grid-template-columns:repeat(3,1fr)}}
+</style>
+
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="5K Training">
+
+</head>
+<body>
+<header><h1>12-Week Training Tracker</h1><p>7:30 baseline • Strength • Run/Walk • Bike • Recovery</p></header>
+<main>
+<div class="notice"><b>How to use:</b> Tap a week to open it. The checkboxes and week sections work without JavaScript. When opened in Safari/Chrome, your entries are also saved automatically on that device.</div>
+<div class="race-calendar"><b>Race calendar</b><br>🏁 August 28, 2026 — Race #1<br>🏁 November 18, 2026 — Race #2</div>
+<nav class="nav"><a href="#week-1">W1</a><a href="#week-2">W2</a><a href="#week-3">W3</a><a href="#week-4">W4</a><a href="#week-5">W5</a><a href="#week-6">W6</a><a href="#week-7">W7</a><a href="#week-8">W8</a><a href="#week-9">W9</a><a href="#week-10">W10</a><a href="#week-11">W11</a><a href="#week-12">W12</a></nav>
+
+    <details class="week" id="week-1" open>
+      <summary><span>Week 1</span><small>Baseline: make 7:30 repeatable</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> Run 7:30 / walk 2:00 × 3; fourth run 5:00–7:30, then shorter intervals as needed to finish ~5K</div>
+        <p><b>Strength target:</b> 20 push-ups • 20 sit-ups • 5 burpees • 2 × 20 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w1m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w1e0"> <span>5K Run/Walk<small>Run 7:30 / walk 2:00 × 3; fourth run 5:00–7:30, then shorter intervals as needed to finish ~5K</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 20 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 10 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 6 each leg</li>
+<li>Front plank: 2 × 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li>
+<li>Controlled burpees: 5</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w1m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w1e1"> <span>Exercise Bike<small>30 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w1m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w1e2"> <span>5K Run/Walk<small>Run 7:30 / walk 2:00 × 3; fourth run 5:00–7:30, then shorter intervals as needed to finish ~5K</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 15 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 10 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 20 sec each side</li>
+<li>Front plank: 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w1m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w1e3"> <span>Exercise Bike<small>30 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w1m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w1e4"> <span>5K Run/Walk<small>Run 7:30 / walk 2:00 × 3; fourth run 5:00–7:30, then shorter intervals as needed to finish ~5K</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 20 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 10 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 6 each leg</li>
+<li>Front plank: 2 × 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li>
+<li>Controlled burpees: 5</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w1m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w1e5"> <span>Long Bike Ride<small>40 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w1m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w1e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w1ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w1weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w1waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w1longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w15k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w1win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w1goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-2" >
+      <summary><span>Week 2</span><small>Repeatability before progression</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> Run 7:30 / walk 2:00 × 4 if controlled; otherwise repeat Week 1</div>
+        <p><b>Strength target:</b> 22–25 push-ups • 20 sit-ups • 6 burpees • 2 × 25 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w2m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w2e0"> <span>5K Run/Walk<small>Run 7:30 / walk 2:00 × 4 if controlled; otherwise repeat Week 1</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 20 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 10 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 6 each leg</li>
+<li>Front plank: 2 × 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li>
+<li>Controlled burpees: 5</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w2m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w2e1"> <span>Exercise Bike<small>30–35 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w2m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w2e2"> <span>5K Run/Walk<small>Run 7:30 / walk 2:00 × 4 if controlled; otherwise repeat Week 1</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 15 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 10 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 20 sec each side</li>
+<li>Front plank: 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w2m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w2e3"> <span>Exercise Bike<small>30 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w2m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w2e4"> <span>5K Run/Walk<small>Run 7:30 / walk 2:00 × 4 if controlled; otherwise repeat Week 1</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 20 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 10 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 6 each leg</li>
+<li>Front plank: 2 × 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li>
+<li>Controlled burpees: 5</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w2m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w2e5"> <span>Long Bike Ride<small>40 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w2m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w2e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w2ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w2weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w2waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w2longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w25k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w2win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w2goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-3" >
+      <summary><span>Week 3</span><small>Small endurance increase</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> If Week 2 was controlled: run 8:00 / walk 2:00 × 3–4. If not, stay at 7:30</div>
+        <p><b>Strength target:</b> 25 push-ups • 20–25 sit-ups • 7–8 burpees • 30 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w3m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w3e0"> <span>5K Run/Walk<small>If Week 2 was controlled: run 8:00 / walk 2:00 × 3–4. If not, stay at 7:30</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 25 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 6 each leg</li>
+<li>Front plank: 2 × 30 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li>
+<li>Controlled burpees: 8</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w3m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w3e1"> <span>Exercise Bike<small>35 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 14 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w3m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w3e2"> <span>5K Run/Walk<small>If Week 2 was controlled: run 8:00 / walk 2:00 × 3–4. If not, stay at 7:30</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 20 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 14 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 25 sec each side</li>
+<li>Front plank: 30 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w3m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w3e3"> <span>Exercise Bike<small>35 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w3m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w3e4"> <span>5K Run/Walk<small>If Week 2 was controlled: run 8:00 / walk 2:00 × 3–4. If not, stay at 7:30</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 25 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 6 each leg</li>
+<li>Front plank: 2 × 30 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li>
+<li>Controlled burpees: 8</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w3m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w3e5"> <span>Long Bike Ride<small>45 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w3m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w3e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w3ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w3weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w3waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w3longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w35k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w3win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w3goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-4" >
+      <summary><span>Week 4</span><small>Build without forcing progression</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> If ready: run 8:30 / walk 2:00 × 3–4. Repeat 8:00 if the prior week was difficult</div>
+        <p><b>Strength target:</b> 25–30 push-ups • 25 sit-ups • 8 burpees • 35 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w4m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w4e0"> <span>5K Run/Walk<small>If ready: run 8:30 / walk 2:00 × 3–4. Repeat 8:00 if the prior week was difficult</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 25 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 6 each leg</li>
+<li>Front plank: 2 × 30 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li>
+<li>Controlled burpees: 8</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w4m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w4e1"> <span>Exercise Bike<small>35 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 20 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 14 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w4m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w4e2"> <span>5K Run/Walk<small>If ready: run 8:30 / walk 2:00 × 3–4. Repeat 8:00 if the prior week was difficult</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 20 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 14 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 25 sec each side</li>
+<li>Front plank: 30 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w4m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w4e3"> <span>Exercise Bike<small>35 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w4m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w4e4"> <span>5K Run/Walk<small>If ready: run 8:30 / walk 2:00 × 3–4. Repeat 8:00 if the prior week was difficult</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 25 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 12 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 6 each leg</li>
+<li>Front plank: 2 × 30 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 15</li><li>Tibialis raises: 15</li>
+<li>Controlled burpees: 8</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w4m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w4e5"> <span>Long Bike Ride<small>45 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w4m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w4e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w4ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w4weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w4waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w4longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w45k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w4win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w4goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-5" >
+      <summary><span>Week 5</span><small>Peak training before Race #1</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> If ready: run 9:00 / walk 2:00 × 3, then easy run/walk to finish. Keep all running controlled</div>
+        <p><b>Strength target:</b> 30 push-ups • 25 sit-ups • 8–10 burpees • 40 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w5m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w5e0"> <span>5K Run/Walk<small>If ready: run 9:00 / walk 2:00 × 3, then easy run/walk to finish. Keep all running controlled</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 30 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 8 each leg</li>
+<li>Front plank: 2 × 40 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li>
+<li>Controlled burpees: 10</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w5m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w5e1"> <span>Exercise Bike<small>35–40 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 30 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 16 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w5m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w5e2"> <span>5K Run/Walk<small>If ready: run 9:00 / walk 2:00 × 3, then easy run/walk to finish. Keep all running controlled</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 25 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 16 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 30 sec each side</li>
+<li>Front plank: 40 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w5m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w5e3"> <span>Exercise Bike<small>30 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w5m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w5e4"> <span>5K Run/Walk<small>If ready: run 9:00 / walk 2:00 × 3, then easy run/walk to finish. Keep all running controlled</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 30 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 8 each leg</li>
+<li>Front plank: 2 × 40 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li>
+<li>Controlled burpees: 10</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w5m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w5e5"> <span>Long Bike Ride<small>40 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w5m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w5e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w5ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w5weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w5waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w5longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w55k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w5win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w5goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-6" >
+      <summary><span>Week 6</span><small>Taper + August 28 race</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> Race week: reduce running volume. Easy short run/walk early in week; August 28 = 5K Race #1</div>
+        <p><b>Strength target:</b> Light strength only; no hard leg work close to race</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        <div class="race">🏁 <b>August 28, 2026 — 5K Race #1</b><br>Keep the first part of the week easy and let the race be the hard effort.</div>
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w6m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w6e0"> <span>5K Run/Walk<small>Race week: reduce running volume. Easy short run/walk early in week; August 28 = 5K Race #1</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 30 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 8 each leg</li>
+<li>Front plank: 2 × 40 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li>
+<li>Controlled burpees: 10</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w6m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w6e1"> <span>Exercise Bike<small>20–30 min very easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 30 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 16 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w6m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w6e2"> <span>5K Run/Walk<small>Race week: reduce running volume. Easy short run/walk early in week; August 28 = 5K Race #1</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 25 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 16 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 30 sec each side</li>
+<li>Front plank: 40 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w6m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w6e3"> <span>Exercise Bike<small>Optional easy spin</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w6m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w6e4"> <span>5K Run/Walk<small>Race week: reduce running volume. Easy short run/walk early in week; August 28 = 5K Race #1</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 30 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 8 each leg</li>
+<li>Front plank: 2 × 40 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li>
+<li>Controlled burpees: 10</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w6m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w6e5"> <span>Long Bike Ride<small>Recovery only</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w6m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w6e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w6ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w6weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w6waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w6longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w65k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w6win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w6goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-7" >
+      <summary><span>Week 7</span><small>Recover and reassess</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> Recovery: easy run/walk only. Use race result and recovery to set your next baseline</div>
+        <p><b>Strength target:</b> Return gradually at ~70–80% of normal volume</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w7m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w7e0"> <span>5K Run/Walk<small>Recovery: easy run/walk only. Use race result and recovery to set your next baseline</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 35 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 8 each leg</li>
+<li>Front plank: 2 × 50 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li>
+<li>Controlled burpees: 12</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w7m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w7e1"> <span>Exercise Bike<small>30 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 40 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 18 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w7m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w7e2"> <span>5K Run/Walk<small>Recovery: easy run/walk only. Use race result and recovery to set your next baseline</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 30 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 18 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 35 sec each side</li>
+<li>Front plank: 50 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w7m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w7e3"> <span>Exercise Bike<small>30–35 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w7m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w7e4"> <span>5K Run/Walk<small>Recovery: easy run/walk only. Use race result and recovery to set your next baseline</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 35 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 8 each leg</li>
+<li>Front plank: 2 × 50 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li>
+<li>Controlled burpees: 12</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w7m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w7e5"> <span>Long Bike Ride<small>40 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w7m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w7e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w7ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w7weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w7waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w7longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w75k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w7win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w7goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-8" >
+      <summary><span>Week 8</span><small>Rebuild</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> Resume the highest interval you completed comfortably before the race; aim for 3–4 controlled repeats</div>
+        <p><b>Strength target:</b> 35 push-ups • 25 sit-ups • 10–12 burpees • 45–50 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w8m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w8e0"> <span>5K Run/Walk<small>Resume the highest interval you completed comfortably before the race; aim for 3–4 controlled repeats</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 35 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 8 each leg</li>
+<li>Front plank: 2 × 50 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li>
+<li>Controlled burpees: 12</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w8m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w8e1"> <span>Exercise Bike<small>40 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 40 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 18 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w8m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w8e2"> <span>5K Run/Walk<small>Resume the highest interval you completed comfortably before the race; aim for 3–4 controlled repeats</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 30 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 18 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 35 sec each side</li>
+<li>Front plank: 50 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w8m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w8e3"> <span>Exercise Bike<small>40 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w8m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w8e4"> <span>5K Run/Walk<small>Resume the highest interval you completed comfortably before the race; aim for 3–4 controlled repeats</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 35 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 15 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 8 each leg</li>
+<li>Front plank: 2 × 50 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 20</li><li>Tibialis raises: 20</li>
+<li>Controlled burpees: 12</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w8m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w8e5"> <span>Long Bike Ride<small>50 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w8m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w8e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w8ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w8weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w8waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w8longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w85k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w8win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w8goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-9" >
+      <summary><span>Week 9</span><small>Longer controlled intervals</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> If ready, add about 1 minute to your established interval; walk 2:00 between repeats</div>
+        <p><b>Strength target:</b> 35–40 push-ups • 20–25 sit-ups • 12 burpees • 50 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w9m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w9e0"> <span>5K Run/Walk<small>If ready, add about 1 minute to your established interval; walk 2:00 between repeats</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 40 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 10 each leg</li>
+<li>Front plank: 2 × 55 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li>
+<li>Controlled burpees: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w9m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w9e1"> <span>Exercise Bike<small>45 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 45 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w9m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w9e2"> <span>5K Run/Walk<small>If ready, add about 1 minute to your established interval; walk 2:00 between repeats</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 35 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 40 sec each side</li>
+<li>Front plank: 55 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w9m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w9e3"> <span>Exercise Bike<small>40 min with 4 × 2-min moderate efforts</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w9m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w9e4"> <span>5K Run/Walk<small>If ready, add about 1 minute to your established interval; walk 2:00 between repeats</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 40 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 10 each leg</li>
+<li>Front plank: 2 × 55 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li>
+<li>Controlled burpees: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w9m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w9e5"> <span>Long Bike Ride<small>50–55 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w9m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w9e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w9ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w9weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w9waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w9longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w95k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w9win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w9goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-10" >
+      <summary><span>Week 10</span><small>Endurance + aerobic strength</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> Progress another 1 minute only if the previous interval was repeatable with good form</div>
+        <p><b>Strength target:</b> 40 push-ups • 20 sit-ups • 12–15 burpees • 55 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w10m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w10e0"> <span>5K Run/Walk<small>Progress another 1 minute only if the previous interval was repeatable with good form</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 40 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 10 each leg</li>
+<li>Front plank: 2 × 55 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li>
+<li>Controlled burpees: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w10m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w10e1"> <span>Exercise Bike<small>45 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 45 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w10m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w10e2"> <span>5K Run/Walk<small>Progress another 1 minute only if the previous interval was repeatable with good form</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 35 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 40 sec each side</li>
+<li>Front plank: 55 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w10m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w10e3"> <span>Exercise Bike<small>40 min with 5 × 2-min moderate efforts</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w10m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w10e4"> <span>5K Run/Walk<small>Progress another 1 minute only if the previous interval was repeatable with good form</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 40 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 10 each leg</li>
+<li>Front plank: 2 × 55 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li>
+<li>Controlled burpees: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w10m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w10e5"> <span>Long Bike Ride<small>55 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w10m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w10e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w10ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w10weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w10waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w10longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w105k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w10win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w10goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-11" >
+      <summary><span>Week 11</span><small>5K-specific endurance</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> Continue readiness-based progression; one run may be a steady 5K effort, not an all-out test</div>
+        <p><b>Strength target:</b> 40–45 push-ups • 20 sit-ups • 15 burpees • 60 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w11m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w11e0"> <span>5K Run/Walk<small>Continue readiness-based progression; one run may be a steady 5K effort, not an all-out test</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 45 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 10 each leg</li>
+<li>Front plank: 2 × 60 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li>
+<li>Controlled burpees: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w11m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w11e1"> <span>Exercise Bike<small>45 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 50 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 22 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w11m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w11e2"> <span>5K Run/Walk<small>Continue readiness-based progression; one run may be a steady 5K effort, not an all-out test</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 40 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 22 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 45 sec each side</li>
+<li>Front plank: 60 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w11m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w11e3"> <span>Exercise Bike<small>40 min intervals</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w11m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w11e4"> <span>5K Run/Walk<small>Continue readiness-based progression; one run may be a steady 5K effort, not an all-out test</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 45 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 10 each leg</li>
+<li>Front plank: 2 × 60 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li>
+<li>Controlled burpees: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w11m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w11e5"> <span>Long Bike Ride<small>55–60 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w11m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w11e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w11ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w11weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w11waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w11longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w115k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w11win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w11goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+    <details class="week" id="week-12" >
+      <summary><span>Week 12</span><small>Finish strong</small></summary>
+      <div class="week-body">
+        <div class="callout"><b>Run plan:</b> Establish your next baseline: controlled longer intervals or an easy continuous effort if ready</div>
+        <p><b>Strength target:</b> 45–50 push-ups • 20 sit-ups • 15 burpees • 60 sec plank</p>
+        <div class="rule"><b>Progression rule:</b> Advance only when the current interval is repeatable with controlled effort and good form. If the final repeat is a major struggle, repeat the interval.</div>
+        
+        
+        <div class="day-card">
+          <h3>Monday</h3>
+          <label class="check"><input type="checkbox" data-save="w12m0"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w12e0"> <span>5K Run/Walk<small>Establish your next baseline: controlled longer intervals or an easy continuous effort if ready</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 45 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 10 each leg</li>
+<li>Front plank: 2 × 60 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li>
+<li>Controlled burpees: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Tuesday</h3>
+          <label class="check"><input type="checkbox" data-save="w12m1"> <span>Recovery + Core</span></label>
+          <label class="check"><input type="checkbox" data-save="w12e1"> <span>Exercise Bike<small>45 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>5 min easy walk/march</li>
+<li>Front plank: 2 × 50 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 22 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bird-dog: 8 each side</li>
+<li>Calf stretch: 2 × 30 sec/side</li><li>Hip-flexor stretch: 2 × 30 sec/side</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Wednesday</h3>
+          <label class="check"><input type="checkbox" data-save="w12m2"> <span>Strength B</span></label>
+          <label class="check"><input type="checkbox" data-save="w12e2"> <span>5K Run/Walk<small>Establish your next baseline: controlled longer intervals or an easy continuous effort if ready</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 40 total (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Glute bridges: 2 × 22 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Side plank: 45 sec each side</li>
+<li>Front plank: 60 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Thursday</h3>
+          <label class="check"><input type="checkbox" data-save="w12m3"> <span>Mobility</span></label>
+          <label class="check"><input type="checkbox" data-save="w12e3"> <span>Exercise Bike<small>40 min intervals</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>Calf stretch: 2 × 30 sec/side</li><li>Hamstring stretch: 2 × 30 sec/side</li>
+<li>Hip-flexor stretch: 2 × 30 sec/side</li><li>Figure-4 glute stretch: 2 × 30 sec/side</li>
+<li>Ankle mobility: 10 reps/side</li><li>Cat-cow: 8–10 slow reps</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Friday</h3>
+          <label class="check"><input type="checkbox" data-save="w12m4"> <span>Strength A</span></label>
+          <label class="check"><input type="checkbox" data-save="w12e4"> <span>5K Run/Walk<small>Establish your next baseline: controlled longer intervals or an easy continuous effort if ready</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul>
+<li>Push-ups: 45 total in quality sets (<a href="https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/" target="_blank">video</a>)</li>
+<li>Bodyweight squats: 20 (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>Reverse lunges: 10 each leg</li>
+<li>Front plank: 2 × 60 sec (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li>
+<li>Calf raises: 25</li><li>Tibialis raises: 25</li>
+<li>Controlled burpees: 15</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Saturday</h3>
+          <label class="check"><input type="checkbox" data-save="w12m5"> <span>Optional Strength + Walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w12e5"> <span>Long Bike Ride<small>60 min easy</small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><ul><li>2 easy rounds: 10 squats (<a href="https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/" target="_blank">video</a>)</li>
+<li>10 glute bridges (<a href="https://www.acefitness.org/resources/everyone/exercise-library/49/glute-bridge/" target="_blank">video</a>)</li><li>10 calf raises</li>
+<li>20–30 sec plank (<a href="https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/" target="_blank">video</a>)</li></ul></details>
+        </div>
+        <div class="day-card">
+          <h3>Sunday</h3>
+          <label class="check"><input type="checkbox" data-save="w12m6"> <span>Rest / gentle walk</span></label>
+          <label class="check"><input type="checkbox" data-save="w12e6"> <span>Rest<small></small></span></label>
+          <details class="exercise"><summary>Exercise details</summary><p>Full rest is appropriate. An easy walk and gentle mobility are optional.</p></details>
+        </div>
+        <div class="metrics">
+          <h3>Weekly check-in</h3>
+          <label>Run readiness
+            <select data-save="w12ready">
+              <option value="">Choose</option>
+              <option>Repeat this interval</option>
+              <option>Ready to progress</option>
+              <option>Pain — switch to bike / reassess</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Weight<input data-save="w12weight" inputmode="decimal"></label>
+            <label>Waist<input data-save="w12waist" inputmode="decimal"></label>
+            <label>Longest controlled run<input data-save="w12longrun" placeholder="e.g. 7:30"></label>
+            <label>5K time<input data-save="w125k" placeholder="mm:ss"></label>
+          </div>
+          <label>Biggest win<textarea data-save="w12win"></textarea></label>
+          <label>Next week's goal<textarea data-save="w12goal"></textarea></label>
+        </div>
+      </div>
+    </details>
+<footer>Progress saves locally when browser storage is available.</footer>
+</main>
+<script>
+(function(){
+  try {
+    document.querySelectorAll('[data-save]').forEach(function(el){
+      var k='train_'+el.getAttribute('data-save');
+      var saved=localStorage.getItem(k);
+      if(saved!==null){
+        if(el.type==='checkbox') el.checked=saved==='1';
+        else el.value=saved;
+      }
+      var eventName=(el.type==='checkbox'||el.tagName==='SELECT')?'change':'input';
+      el.addEventListener(eventName,function(){
+        localStorage.setItem(k,el.type==='checkbox'?(el.checked?'1':'0'):el.value);
+      });
+    });
+  } catch(e) {}
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('./service-worker.js').catch(function(){});
+  });
+}
+</script>
+
+</body></html>
