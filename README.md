@@ -1,10 +1,1 @@
-# 5K Training App
-
-Files for GitHub Pages:
-- index.html
-- manifest.webmanifest
-- service-worker.js
-- icon-192.png
-- icon-512.png
-
-Upload all five files to the root of one GitHub repository, then enable GitHub Pages from the main branch/root folder.
+Replace the files in your existing GitHub Pages repository with these versions, then commit. GitHub Pages will redeploy automatically. This rebuild uses a new v3_ local-storage prefix, so it begins as a fresh program rather than importing old checkmarks.
